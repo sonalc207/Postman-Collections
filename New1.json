@@ -1,0 +1,141 @@
+{
+  "info": {
+    "_postman_id": "65f417ea-3373-4850-a602-0d980c2b6550",
+    "name": "My First Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33941522",
+    "_collection_link": "https://go.postman.co/collection/33941522-65f417ea-3373-4850-a602-0d980c2b6550?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Req",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://reqres.in/#use-cases/api/users?page=2",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            ""
+          ],
+          "hash": "use-cases/api/users?page=2"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Req",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"name\": \"Apple MacBook Pro 16\",\n   \"data\": {\n      \"year\": 2019,\n      \"price\": 1849.99,\n      \"CPU model\": \"Intel Core i9\",\n      \"Hard disk size\": \"1 TB\"\n   }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.restful-api.dev/objects",
+          "protocol": "https",
+          "host": [
+            "api",
+            "restful-api",
+            "dev"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Req 1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\t{\"name\":\"test\",\"salary\":\"123\",\"age\":\"23\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dummy.restapiexample.com/api/v1/create",
+          "protocol": "https",
+          "host": [
+            "dummy",
+            "restapiexample",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Req",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"test\",\"salary\":\"123\",\"age\":\"23\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dummy.restapiexample.com/api/v1/update/21",
+          "protocol": "https",
+          "host": [
+            "dummy",
+            "restapiexample",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "update",
+            "21"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
